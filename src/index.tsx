@@ -9,6 +9,7 @@ import React, {
   memo
 } from 'react'
 import type { UseThemeProps, ThemeProviderProps } from './types'
+import Script from 'next/script'
 
 const colorSchemes = ['light', 'dark']
 const MEDIA = '(prefers-color-scheme: dark)'
@@ -262,7 +263,7 @@ const ThemeScript = memo(
       )};}${fallbackColorScheme}}catch(t){}}();`
     })()
 
-    return <script nonce={nonce} dangerouslySetInnerHTML={{ __html: scriptSrc }} />
+    return <Script id="theme-script" nonce={nonce} dangerouslySetInnerHTML={{ __html: scriptSrc }} />
   },
   // Never re-render this component
   () => true
