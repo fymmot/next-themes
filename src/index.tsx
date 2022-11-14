@@ -152,7 +152,7 @@ const Theme: React.FC<ThemeProviderProps> = ({
     <ThemeContext.Provider
       value={providerValue}
     >
-      <ThemeScript
+      {/*<ThemeScript
         {...{
           forcedTheme,
           disableTransitionOnChange,
@@ -167,7 +167,7 @@ const Theme: React.FC<ThemeProviderProps> = ({
           attrs,
           nonce
         }}
-      />
+      />*/}
       {children}
     </ThemeContext.Provider>
   )
