@@ -6,10 +6,10 @@ import React, {
   useEffect,
   useState,
   useMemo,
-  memo
+  // memo
 } from 'react'
 import type { UseThemeProps, ThemeProviderProps } from './types'
-import Script from 'next/script'
+// import Script from 'next/script'
 
 const colorSchemes = ['light', 'dark']
 const MEDIA = '(prefers-color-scheme: dark)'
@@ -40,7 +40,7 @@ const Theme: React.FC<ThemeProviderProps> = ({
   attribute = 'data-theme',
   value,
   children,
-  nonce
+  // nonce
 }) => {
   const [theme, setThemeState] = useState(() => getTheme(storageKey, defaultTheme))
   const [resolvedTheme, setResolvedTheme] = useState(() => getTheme(storageKey))
@@ -173,7 +173,7 @@ const Theme: React.FC<ThemeProviderProps> = ({
   )
 }
 
-const ThemeScript = memo(
+/*const ThemeScript = memo(
   ({
     forcedTheme,
     storageKey,
@@ -267,7 +267,7 @@ const ThemeScript = memo(
   },
   // Never re-render this component
   () => true
-)
+)*/
 
 // Helpers
 const getTheme = (key: string, fallback?: string) => {
